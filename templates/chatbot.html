@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ValuEnable Voice Assistant</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #0f0f0f;
+      font-family: 'Segoe UI', sans-serif;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.8em;
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    .highlight {
+      color: #4a6fa5; /* Refined grayish-blue */
+    }
+
+    p {
+      color: #cccccc;
+      font-size: 1.1em;
+      margin-top: 10px;
+      max-width: 600px;
+      line-height: 1.5;
+    }
+
+    .voice-button {
+      margin-top: 40px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: radial-gradient(circle at center, #4a6fa5, #2e3e55); /* Rich grayish-blue */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1em;
+      font-weight: bold;
+      color: #ffffff;
+      cursor: pointer;
+      box-shadow: 0 0 25px #4a6fa5;
+      border: none;
+      transition: all 0.3s ease;
+    }
+
+    .voice-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 40px #4a6fa5;
+    }
+
+    #chat-msg {
+      margin-top: 20px;
+      font-size: 1em;
+      color: #b0bec5;
+    }
+
+    .subtle {
+      font-size: 0.9em;
+      color: #999999;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>The <span class="highlight">ValuEnable</span> Voice Assistant</h1>
+  <p>
+    Powered by InsureBot — your AI-driven insurance guide. Ask questions about policy details, premiums, due dates, and more using your voice. Now serving real-time support in multiple Indian languages.
+  </p>
+
+  <button class="voice-button" onclick="talkToBot()">Click to talk to me</button>
+
+  <div id="chat-msg"></div>
+
+  <p class="subtle">🎙️ Speak naturally in English, Hindi, Telugu, Tamil, or Kannada — InsureBot will take care of the rest.</p>
+
+  <script>
+    async function talkToBot() {
+      const btn = document.querySelector(".voice-button");
+      const msg = document.getElementById("chat-msg");
+      btn.innerText = "🎙 Listening...";
+      try {
+        const res = await fetch("/ask", { method: "POST" });
+        const data = await res.json();
+        msg.innerText = data.reply;
+      } catch (err) {
+        msg.innerText = "";
+      } finally {
+        btn.innerText = "Click to talk to me";
+      }
+    }
+  </script>
+
+</body>
+</html>
