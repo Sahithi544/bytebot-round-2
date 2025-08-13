@@ -1,41 +1,47 @@
-1. Project Overview
-The Multilingual Voice-Based AI Insurance Chatbot is designed to help users interact with insurance services through natural voice conversations in five languages — English, Hindi, Telugu, Tamil, and Kannada.
-It answers FAQs, provides policy details, and guides users through insurance processes using a friendly voice-based interface.
+# ByteBot – Multilingual Voice-Based AI Insurance Chatbot
 
-2. Features
-Voice Input & Output — Users can speak to the bot and receive spoken responses.
+## 📌 Overview
+**ByteBot** is a multilingual, voice-enabled AI chatbot built for the **InsureBot Quest 2025** hackathon.  
+It allows users to ask insurance-related questions in **five languages** — English, Hindi, Telugu, Tamil, and Kannada — and get answers with **voice output**.  
 
-Multilingual Support — Real-time translation and speech synthesis in 5 languages.
+The bot is designed to answer FAQs, explain policies, guide claim processes, and provide details about **ValuEnable** services.
 
-Insurance-Focused Knowledge Base — Answers FAQs about policies, claims, and ValuEnable services.
+---
 
-Dynamic & Scalable — Easy to add more questions and languages.
+## 🚀 Features
+- 🎙 **Voice Input & Output** – Speak to the bot and receive spoken replies.
+- 🌍 **Multilingual Support** – Real-time translation in 5 languages.
+- 📄 **Insurance Knowledge Base** – Powered by `faq_data.json` for quick and accurate answers.
+- 📊 **User Interaction Logging** – Tracks queries for improvement.
+- ⚡ **Fast & Lightweight** – Runs locally or can be deployed to cloud.
 
-User Interaction Logging — Tracks conversation history for improvements.
+---
 
-3. Tech Stack
-Backend: Python (Flask), gTTS (Google Text-to-Speech), SpeechRecognition, Deep Translator
+## 🛠 Tech Stack
+- **Backend:** Python (Flask)
+- **Frontend:** HTML, CSS, JavaScript
+- **AI & Voice:** SpeechRecognition, gTTS, Deep Translator
+- **Knowledge Base:** JSON file
 
-Frontend: HTML, CSS, JavaScript
+---
 
-Database/Knowledge Base: JSON (faq_data.json)
+## 📥 Installation & Setup
 
-Libraries:
+### Prerequisites
+- Python 3.8+
+- pip package manager
+- Internet connection (for APIs)
 
-Flask (API Layer)
+### Steps
+```bash
+# 1. Clone the repository
+git clone https://github.com/Sahithi544/bytebot-round-2.git
+cd bytebot-round-2
 
-gTTS (Voice Output)
+# 2. Install dependencies
+pip install -r requirements.txt
 
-SpeechRecognition (Voice Input)
+# 3. Run the Flask server
+python app.py
 
-Deep Translator (Language Translation)
-
-PyDub (Audio Handling)
-
-4. Installation & Setup
-Prerequisites
-Python 3.8+
-
-pip package manager
-
-Internet connection (for API calls)
+# 4. Open chatbot.html in your browser
