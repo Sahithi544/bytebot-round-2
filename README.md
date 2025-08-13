@@ -32,7 +32,7 @@ The bot is designed to answer FAQs, explain policies, guide claim processes, and
 - pip package manager
 - Internet connection (for APIs)
 
-### Steps
+##Steps
 ```bash
 # 1. Clone the repository
 git clone https://github.com/Sahithi544/bytebot-round-2.git
@@ -45,3 +45,58 @@ pip install -r requirements.txt
 python app.py
 
 # 4. Open chatbot.html in your browser
+💬 How to Use
+Select your preferred language from the dropdown.
+
+Click the 🎤 Speak button and ask your question.
+
+The bot will listen, process your query, and reply with both text and voice.
+
+💡 Example Questions
+"What is term insurance?"
+
+"How do I claim my health insurance?"
+
+"Tell me about ValuEnable services."
+
+"Explain motor insurance coverage."
+
+🎥 Demo Video
+📺 [Add your YouTube/Drive demo link here]
+
+📸 Screenshots
+Add 2–3 screenshots of the chatbot UI here.
+
+🔮 Future Improvements
+Integration with live insurance APIs.
+
+More regional language support.
+
+Option to purchase policies directly via chatbot.
+
+Sahithi Guntreddi – Backend Developer & AI/NLP Engineer
+
+Designed and implemented the Python-based chatbot backend.
+
+Integrated speech recognition, text-to-speech, and language translation APIs.
+
+Developed and maintained the insurance FAQ knowledge base.
+
+Amiti Devipriya – Frontend Developer & UI/UX Designer
+
+Created responsive HTML/CSS/JavaScript interface.
+
+Implemented multilingual UI features and voice interaction buttons.
+
+Ensured smooth user experience with accessible design.
+
+Nakka Meghamala– Integration & Testing Engineer
+
+Connected backend APIs with the frontend.
+
+Performed end-to-end testing across all supported languages.
+
+Managed bug tracking, performance optimization, and deployment readiness.
+
+
+
