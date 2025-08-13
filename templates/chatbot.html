@@ -1,107 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ValuEnable Voice Assistant</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ByteBot — Voice Assistant</title>
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #0f0f0f;
-      font-family: 'Segoe UI', sans-serif;
-      color: #ffffff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      text-align: center;
+    :root{
+      --bg:#0b0f14; --card:#0f1720; --accent:#4a90e2; --muted:#98a0ab; --glass: rgba(255,255,255,0.04);
+      --user-bg: linear-gradient(135deg,#20c997,#2dd4bf);
+      --bot-bg: linear-gradient(135deg,#4a90e2,#2b6ed6);
+      --radius:14px;
+      font-family: "Segoe UI", Roboto, system-ui, -apple-system, "Helvetica Neue", Arial;
     }
+    html,body{height:100%; margin:0; background:var(--bg); color:#e6eef6}
+    .wrap{max-width:920px; margin:28px auto; padding:22px; display:grid; gap:18px; grid-template-columns: 420px 1fr; align-items:start}
+    .panel{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:var(--radius); padding:16px; box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+    .left {display:flex; flex-direction:column; gap:12px}
+    .brand {display:flex; gap:12px; align-items:center}
+    .logo {width:56px; height:56px; border-radius:12px; background:var(--glass); display:flex; align-items:center; justify-content:center; font-weight:700; color:var(--accent)}
+    .title {font-size:1.15rem; font-weight:700; color:#fff}
+    .subtitle {color:var(--muted); font-size:0.9rem; margin-top:-4px}
 
-    h1 {
-      font-size: 2.8em;
-      font-weight: bold;
-      color: #ffffff;
-    }
-
-    .highlight {
-      color: #4a6fa5; /* Refined grayish-blue */
-    }
-
-    p {
-      color: #cccccc;
-      font-size: 1.1em;
-      margin-top: 10px;
-      max-width: 600px;
-      line-height: 1.5;
-    }
-
-    .voice-button {
-      margin-top: 40px;
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      background: radial-gradient(circle at center, #4a6fa5, #2e3e55); /* Rich grayish-blue */
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1em;
-      font-weight: bold;
-      color: #ffffff;
-      cursor: pointer;
-      box-shadow: 0 0 25px #4a6fa5;
+    /* 🎤 Enhanced voice button */
+    .big-btn {
+      width: 100%;
+      padding: 18px;
+      border-radius: 12px;
       border: none;
-      transition: all 0.3s ease;
+      cursor: pointer;
+      background: linear-gradient(90deg, #1f7ed8, #2365c7);
+      color: white;
+      font-size: 1rem;
+      font-weight: 700;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.1s ease, box-shadow 0.3s ease;
+    }
+    .big-btn:hover {
+      box-shadow: 0 0 12px rgba(74, 144, 226, 0.6);
+      transform: translateY(-1px);
+    }
+    .big-btn:active { transform: translateY(1px); }
+    .big-btn.recording {
+      background: linear-gradient(90deg, #ff4d4d, #d62828);
+      animation: pulse 1.2s infinite;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0px rgba(255, 77, 77, 0.6); }
+      50% { box-shadow: 0 0 18px rgba(255, 77, 77, 0.9); }
+      100% { box-shadow: 0 0 0px rgba(255, 77, 77, 0.6); }
     }
 
-    .voice-button:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 40px #4a6fa5;
-    }
+    .small{font-size:0.9rem; color:var(--muted)}
+    .right {height:70vh; overflow:auto; padding:10px; display:flex; flex-direction:column; gap:12px}
 
-    #chat-msg {
-      margin-top: 20px;
-      font-size: 1em;
-      color: #b0bec5;
-    }
+    /* message card */
+    .msg-card{display:flex; gap:12px; align-items:flex-start; padding:12px; border-radius:12px; background:var(--card); box-shadow:0 6px 12px rgba(2,6,23,0.5)}
+    .avatar{width:44px; height:44px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-weight:700; color:white}
+    .avatar.user{background:linear-gradient(135deg,#10b981,#06b6d4)}
+    .avatar.bot{background:linear-gradient(135deg,#4a90e2,#2b6ed6)}
+    .body{flex:1}
+    .meta{display:flex; gap:8px; align-items:center; margin-bottom:6px}
+    .time{font-size:0.78rem; color:var(--muted)}
+    .lang{font-size:0.75rem; color:#0b1220; background:#cfe9ff; padding:4px 8px; border-radius:999px; font-weight:600}
+    .text{font-size:0.98rem; color:#eaf4ff; line-height:1.35}
+    .empty{color:var(--muted); text-align:center; padding:24px}
 
-    .subtle {
-      font-size: 0.9em;
-      color: #999999;
-      margin-top: 30px;
+    /* responsive */
+    @media (max-width:900px){
+      .wrap{grid-template-columns: 1fr; padding:14px}
+      .right{height:58vh}
     }
   </style>
 </head>
 <body>
+  <div class="wrap">
+    <!-- Left panel: controls & info -->
+    <div class="panel left">
+      <div class="brand">
+        <div class="logo">BB</div>
+        <div>
+          <div class="title">ByteBot — Voice Assistant</div>
+          <div class="subtitle">Multilingual insurance assistant (EN/HIN/TE/TM/KN)</div>
+        </div>
+      </div>
 
-  <h1>The <span class="highlight">ValuEnable</span> Voice Assistant</h1>
-  <p>
-    Powered by InsureBot — your AI-driven insurance guide. Ask questions about policy details, premiums, due dates, and more using your voice. Now serving real-time support in multiple Indian languages.
-  </p>
+      <div style="display:flex; gap:10px; flex-direction:column;">
+        <button id="voiceBtn" class="big-btn">🎤 Click to Speak</button>
+        <div class="small">Tip: speak naturally. The server records audio, converts it to text, and replies with voice & text.</div>
+      </div>
 
-  <button class="voice-button" onclick="talkToBot()">Click to talk to me</button>
+      <div style="margin-top:8px; font-size:0.9rem;">
+        <strong style="color:var(--muted)">Status:</strong> <span id="status" style="color:#bfe3ff">Idle</span>
+      </div>
+    </div>
 
-  <div id="chat-msg"></div>
+    <!-- Right panel: message timeline -->
+    <div class="panel right" id="timeline">
+      <div id="empty" class="empty">No messages yet — click Speak to begin the conversation.</div>
+    </div>
+  </div>
 
-  <p class="subtle">🎙️ Speak naturally in English, Hindi, Telugu, Tamil, or Kannada — InsureBot will take care of the rest.</p>
+<script>
+const voiceBtn = document.getElementById('voiceBtn');
+const timeline = document.getElementById('timeline');
+const statusSpan = document.getElementById('status');
 
-  <script>
-    async function talkToBot() {
-      const btn = document.querySelector(".voice-button");
-      const msg = document.getElementById("chat-msg");
-      btn.innerText = "🎙 Listening...";
-      try {
-        const res = await fetch("/ask", { method: "POST" });
-        const data = await res.json();
-        msg.innerText = data.reply;
-      } catch (err) {
-        msg.innerText = "";
-      } finally {
-        btn.innerText = "Click to talk to me";
-      }
+function makeCard(kind, text, lang, timeStr) {
+  const wrapper = document.createElement('div');
+  wrapper.className = 'msg-card';
+
+  const av = document.createElement('div');
+  av.className = 'avatar ' + (kind==='user' ? 'user' : 'bot');
+  av.textContent = (kind==='user') ? 'You' : 'Bot';
+
+  const body = document.createElement('div');
+  body.className = 'body';
+
+  const meta = document.createElement('div');
+  meta.className = 'meta';
+  const t = document.createElement('div'); t.className='time'; t.textContent = timeStr || new Date().toLocaleTimeString();
+  const l = document.createElement('div'); l.className='lang'; l.textContent = (lang||'en').toUpperCase();
+  meta.appendChild(t); meta.appendChild(l);
+
+  const txt = document.createElement('div');
+  txt.className = 'text';
+  txt.textContent = text || '';
+
+  body.appendChild(meta);
+  body.appendChild(txt);
+
+  wrapper.appendChild(av);
+  wrapper.appendChild(body);
+  return wrapper;
+}
+
+function pushMessage(kind, text, lang) {
+  const now = new Date();
+  const timeStr = now.toLocaleString();
+  const card = makeCard(kind, text, lang, timeStr);
+  const placeholder = document.getElementById('empty');
+  if (placeholder) placeholder.remove();
+  timeline.appendChild(card);
+  timeline.scrollTop = timeline.scrollHeight;
+}
+
+function setStatus(s){ statusSpan.textContent = s; }
+
+async function callAsk() {
+  setStatus('Recording...');
+  voiceBtn.disabled = true;
+  voiceBtn.textContent = '🎙 Listening...';
+  voiceBtn.classList.add('recording'); // glow
+
+  try {
+    const resp = await fetch('/ask', { method: 'POST' });
+    if(!resp.ok) {
+      const err = await resp.json().catch(()=>({error:'Unknown server error'}));
+      throw new Error(err.error || 'Server error');
     }
-  </script>
+    const data = await resp.json();
+    const userText = data.user || '';
+    const botText = data.reply || data.error || '';
 
+    pushMessage('user', userText, (data.lang || 'en'));
+    pushMessage('bot', botText, (data.lang || 'en'));
+
+    setStatus('Idle');
+  } catch (err) {
+    console.error('ask error', err);
+    setStatus('Error');
+    pushMessage('bot', '⚠️ Connection or server error. See console.', 'en');
+  } finally {
+    voiceBtn.disabled = false;
+    voiceBtn.textContent = '🎤 Click to Speak';
+    voiceBtn.classList.remove('recording'); // remove glow
+  }
+}
+
+async function tryLoadHistory(){
+  try {
+    const r = await fetch('/history');
+    if(!r.ok) return;
+    const arr = await r.json();
+    if(!Array.isArray(arr) || arr.length===0) return;
+    arr.forEach(item=>{
+      const user = item.user || item.user_text || item.userText || '';
+      const bot = item.bot || item.reply || item.bot_text || '';
+      const lang = item.lang || item.language || 'en';
+      const time = item.time || item.timestamp || '';
+      const card = makeCard('user', user, lang, time);
+      const card2 = makeCard('bot', bot, lang, time);
+      const placeholder = document.getElementById('empty');
+      if (placeholder) placeholder.remove();
+      timeline.appendChild(card);
+      timeline.appendChild(card2);
+    });
+    timeline.scrollTop = timeline.scrollHeight;
+  } catch(e){ /* ignore */ }
+}
+
+voiceBtn.addEventListener('click', callAsk);
+tryLoadHistory();
+</script>
 </body>
 </html>

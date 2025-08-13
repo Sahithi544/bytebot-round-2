@@ -1,0 +1,120 @@
+[2025-08-11 12:17:14] User (en): 
+Bot: Sorry, I couldn't understand that.
+
+[2025-08-11 12:17:49] User (en): hi good morning
+Bot: Good morning! How can I assist you?
+
+[2025-08-11 21:11:28] User (en): 
+Bot: Sorry, I couldn't understand that.
+
+[2025-08-11 21:11:38] User (en): 
+Bot: Sorry, I couldn't understand that.
+
+[2025-08-11 21:12:38] User (en): 
+Bot: Sorry, I couldn't understand that.
+
+[2025-08-11 21:12:48] User (en): good morning
+Bot: Good morning! How can I help you today?
+
+[2025-08-11 21:13:04] User (en): what is
+Bot: ValuEnable is an insurtech company that provides digital solutions for life insurance and financial services.
+
+[2025-08-11 21:13:16] User (en): how can i
+Bot: Visit the ValuEnable website or connect with them via LinkedIn or email.
+
+[2025-08-11 21:13:31] User (en): what is my
+Bot: ValuEnable is an insurtech company that provides digital solutions for life insurance and financial services.
+
+[2025-08-11 21:13:41] User (en): premium
+Bot: You can still pay within the grace period to keep your policy active.
+
+[2025-08-11 21:21:55] User (en): hi
+Bot: Hello! How can I assist you today?
+
+[2025-08-11 21:22:04] User (en): what is
+Bot: ValuEnable is an insurtech company that provides digital solutions for life insurance and financial services.
+
+[2025-08-11 21:22:20] User (en): i want to
+Bot: You can update nominee details by logging in to your portal or visiting a branch.
+
+[2025-08-11 21:22:36] User (en): my policy
+Bot: Visit the website, log in, and download your policy document.
+
+[2025-08-11 21:22:56] User (en): my policy
+Bot: Visit the website, log in, and download your policy document.
+
+[2025-08-11 21:23:27] User (en): 
+Bot: Sorry, I couldn't understand that.
+
+[2025-08-11 21:23:31] User (en): my policy
+Bot: Visit the website, log in, and download your policy document.
+
+[2025-08-11 21:23:42] User (en): my policy is
+Bot: You will be contacted for settlement options, or you can check your maturity amount in the portal.
+
+[2025-08-11 21:23:58] User (en): who founded
+Bot: ValuEnable was founded by industry experts with over 20 years of experience.
+
+[2025-08-11 21:24:15] User (en): can i change my
+Bot: Yes, you can request to change your payment frequency to yearly, half-yearly, quarterly, or monthly.
+
+[2025-08-11 21:26:13] User (en): hi good morning
+Bot: Good morning! How can I help you today?
+
+User (en): hi good morning
+Bot: Good morning! How can I help you today?
+
+User (hi): namaste
+Bot: Hi there! What would you like to know?
+
+User (en): hi good morning
+Bot: Good morning! How can I help you today?
+
+User (hi): namaste
+Bot: Hi there! What would you like to know?
+
+[2025-08-11 22:27:13] User (en): 
+[2025-08-11 22:27:13] Bot: Sorry, I couldn't understand that.
+
+[2025-08-11 22:29:33] User (en): 
+[2025-08-11 22:29:33] Bot: Sorry, I couldn't understand that.
+
+[2025-08-11 22:29:46] User (en): hi good morning
+[2025-08-11 22:29:46] Bot: Good morning! How can I help you today?
+
+[2025-08-11 22:44:52] User (en): 
+[2025-08-11 22:44:52] Bot: Sorry, I couldn't understand that.
+
+[2025-08-11 22:45:09] User (en): 
+[2025-08-11 22:45:09] Bot: Sorry, I couldn't understand that.
+
+[2025-08-11 22:46:09] User (en): 
+[2025-08-11 22:46:09] Bot: Sorry, I couldn't understand that.
+
+[2025-08-11 22:46:21] User (en): 
+[2025-08-11 22:46:21] Bot: Sorry, I couldn't understand that.
+
+[2025-08-11 22:55:10] User (en): 
+[2025-08-11 22:55:10] Bot: Sorry, I couldn't understand that.
+
+[2025-08-12 13:30:08] User (en): 
+[2025-08-12 13:30:08] Bot: Sorry, I couldn't understand that.
+
+[2025-08-12 13:30:20] User (en): good morning
+[2025-08-12 13:30:20] Bot: Good morning! How can I help you today?
+
+[2025-08-12 13:34:29] User (en): hay
+[2025-08-12 13:34:29] Bot: I'm sorry, I don't have an answer to that.
+
+[2025-08-12 13:34:46] User (en): time
+[2025-08-12 13:34:46] Bot: You can update your mobile number in your customer profile online.
+
+[2025-08-12 13:35:18] User (en): hi good morning
+[2025-08-12 13:35:18] Bot: Good morning! How can I help you today?
+
+[2025-08-12 13:35:29] User (en): 
+[2025-08-12 13:35:29] Bot: Sorry, I couldn't understand that.
+
+[2025-08-12 13:35:39] User (en): 
+[2025-08-12 13:35:39] Bot: Sorry, I couldn't understand that.
+

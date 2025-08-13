@@ -1,53 +1,284 @@
 {
-  "hi": "Hello! How can I help you today?",
-  "hello": "Hi there! What would you like to know?",
-  "good morning": "Good morning! How can I assist you?",
-  "good evening": "Good evening! I'm here to help.",
-  "bye": "Goodbye! Have a great day.",
-  "thank you": "You’re most welcome.",
-"good nihgt":"Good night! Have a great sleep, Come back to me whenever you need my guidence",
-  "thanks": "Glad I could help!",
-"how to download policy document": "Login to the portal and download your document",
-  "download policy": "You can download the policy document from your customer portal",
-  "get my policy copy": "Visit the website and download your policy document",
-"see you": "See you! Take care.",
-"who are you": "I’m your insurance assistant bot, here to help you with any queries.",
-  "how are you": "I'm just code, but I'm running smoothly! 😄",
-  "are you a human": "Nope, I’m a voice bot trained to help you with insurance queries.",
-  "what is the premium amount": "The premium amount is ₹100000.",
-  "what is the premium frequency": "The premium is paid yearly.",
-  "what is the sum assured": "The sum assured is ₹1000000.",
-  "what is the policy term": "The policy term is 10 years.",
-  "what is the premium payment term": "The premium payment term is 7 years.",
-  "what is the due date": "The due date is 25th September 2024.",
-  "what is the fund value": "The fund value is ₹553089.",
-  "how much premium has been paid": "The premium paid till date is ₹400000.",
-  "what are the effective returns": "The effective returns are 11.47%.",
-  "what are the charges": "The charges are 3.89%.",
-  "what are the loyalty benefits": "The loyalty benefits are approximately ₹22000.",
-"I need your help":"feel free to ask me anything you want to know about insurance",
-  "tata aia life insurance ke byaaj kaise lage": "Interest is calculated based on your premium payment and policy type.",
-  "premium 40000 for september 2023": "The premium for September 2023 is ₹40,000.",
-  "life insurance outstanding amount of pdf download": "You can download the outstanding amount statement from your policy portal.",
-  "how to update nominee details": "You can update nominee details by logging into your policy account online or visiting the branch.",
-  "how to change mobile number": "Login to the portal or contact customer support to update your mobile number.",
-  "how to check policy status": "You can check your policy status in the customer portal under 'My Policies'.",
-  "how to pay premium online": "Go to the official website, login, and click on 'Pay Premium' option.",
-  "how to download policy document": "Login to the portal and click on 'Download Policy Document' under your profile.",
-  "how to request surrender": "To surrender your policy, submit a surrender request form at the nearest branch or via the portal.",
-  "what is policy revival": "Policy revival is the process of reactivating a lapsed policy by paying dues and penalties.",
-  "what is the lock-in period": "The lock-in period is 5 years for most ULIP policies.",
-  "what is grace period": "The grace period is the additional time given after premium date, usually 15–30 days.",
-  "can i change my payment frequency": "Yes, you can request to change your payment frequency from yearly to half-yearly, quarterly or monthly.",
+  "hi": [
+    "Hello! How can I help you today?",
+    "Hi there! How’s your day going?",
+    "Hey! What can I do for you?"
+  ],
+  "hello": [
+    "Hi there! What would you like to discuss?",
+    "Hello! How can I assist you?",
+    "Hey! What’s on your mind?"
+  ],
+  "good morning": [
+    "Good morning! How’s your day starting off?",
+    "Morning! Hope you’re having a great day so far.",
+    "Good morning! How can I assist you today?"
+  ],
+  "good evening": [
+    "Good evening! How may I help you?",
+    "Evening! How’s your day been?",
+    "Good evening! What would you like to know?"
+  ],
+  "good night": [
+    "Good night! Sleep well, and reach out anytime.",
+    "Good night! Rest up and take care.",
+    "Sweet dreams! Talk to you soon."
+  ],
+  "bye": [
+    "Goodbye! Wishing you a wonderful day ahead.",
+    "Bye! Take care.",
+    "See you later! Have a great day."
+  ],
+  "see you": [
+    "See you soon! Take care.",
+    "Catch you later!",
+    "Talk to you soon!"
+  ],
+  "thanks": [
+    "You’re welcome! Glad I could help.",
+    "No problem at all!",
+    "Always happy to help."
+  ],
+  "thank you": [
+    "It’s my pleasure.",
+    "You’re most welcome.",
+    "Anytime!"
+  ],
+  "i need your help": [
+    "Of course! What would you like to know about your insurance?",
+    "Sure! Tell me what you need help with.",
+    "I’m here for you — what’s your question?"
+  ],
 
-  "what is valuenable": "ValuEnable is an insuretech company that provides digital solutions for life insurance and financial services.",
-  "who founded valuenable": "ValuEnable was founded by a team with over 20 years of experience in the insurance industry.",
-  "when was valuenable started": "ValuEnable was established in June 2021.",
-  "what does valuenable do": "ValuEnable helps insurers improve customer engagement and retention using behavioral nudges and personalized data solutions.",
-  "what services does valuenable provide": "ValuEnable offers voice AI bots, digital policy management, personalized nudges, and embedded credit solutions.",
-  "is valuenable a part of any group": "Yes, ValuEnable is backed by Rainmatter, an initiative by Zerodha.",
-  "how does valuenable help insurance companies": "ValuEnable provides multi-stack enterprise tools that help reduce customer dropouts and increase policy engagement.",
-  "what makes valuenable unique": "ValuEnable combines AI, data science, and behavioral finance to make life insurance more customer-friendly and accessible.",
-  "how can i contact valuenable": "You can visit the official ValuEnable website or connect with them via LinkedIn or email for support."
+  "who are you": [
+    "I’m ByteBot, your voice-based insurance assistant.",
+    "I’m ByteBot — your friendly insurance guide.",
+    "I’m ByteBot, here to make insurance easy for you."
+  ],
+  "how are you": [
+    "I’m running perfectly, thank you! How can I help?",
+    "I’m doing great! What can I assist you with?",
+    "All systems are good! How can I help today?"
+  ],
+  "are you a human": [
+    "No, I’m an AI assistant here to help with your insurance queries.",
+    "I’m not human, but I can help like one!",
+    "I’m an AI, but I’m trained to make your insurance journey easier."
+  ],
+
+  "how to download policy document": [
+    "Simply log in to your customer portal and select ‘Download Policy Document’.",
+    "Log in to your portal, then click on ‘Download Policy Document’.",
+    "Head to your portal and choose ‘Download Policy Document’."
+  ],
+  "download policy": [
+    "You can download your policy from the ‘My Policies’ section in your portal.",
+    "Log in and go to ‘My Policies’ to download your policy.",
+    "Open your portal, head to ‘My Policies’, and download your document."
+  ],
+  "get my policy copy": [
+    "Log in to your account and download your policy from the portal.",
+    "You can grab a copy from your portal’s ‘My Policies’ section.",
+    "Your policy copy can be downloaded from your online account."
+  ],
+  "i lost my policy document": [
+    "No problem! You can download a copy from your portal or request it from customer care.",
+    "Don’t worry — you can get a copy online or by contacting customer service.",
+    "You can retrieve a copy from your portal or ask our support team."
+  ],
+
+  "what is the premium amount": [
+    "Your premium amount is ₹100,000.",
+    "It’s ₹100,000 per year.",
+    "You’re paying ₹100,000 as your premium."
+  ],
+  "what is the premium frequency": [
+    "Your premium is payable yearly.",
+    "You make your premium payment once a year.",
+    "It’s on an annual payment schedule."
+  ],
+  "what is the sum assured": [
+    "Your sum assured is ₹1,000,000.",
+    "You’re covered for ₹1,000,000.",
+    "Your insurance coverage is ₹1,000,000."
+  ],
+  "what is the policy term": [
+    "Your policy term is 10 years.",
+    "It’s a 10-year policy.",
+    "This policy runs for 10 years."
+  ],
+  "what is the premium payment term": [
+    "You’ll be paying premiums for 7 years.",
+    "Premiums are payable for 7 years.",
+    "You’re on a 7-year payment plan."
+  ],
+  "what is the due date": [
+    "Your next premium due date is 25th September 2024.",
+    "The due date is 25th September 2024.",
+    "You’ll need to pay by 25th September 2024."
+  ],
+  "my premium is overdue": [
+    "You can still make the payment within the grace period to keep your policy active.",
+    "It’s not too late — you can pay within the grace period.",
+    "You have some extra time in the grace period to pay."
+  ],
+  "what is the fund value": [
+    "Your current fund value stands at ₹553,089.",
+    "The fund value is ₹553,089.",
+    "₹553,089 is your current fund value."
+  ],
+  "how much premium has been paid": [
+    "So far, you’ve paid ₹400,000 in premiums.",
+    "You’ve paid a total of ₹400,000 so far.",
+    "₹400,000 has been paid toward your premiums."
+  ],
+  "what are the effective returns": [
+    "Your effective returns are currently 11.47%.",
+    "You’re earning 11.47% in returns.",
+    "The returns are at 11.47% right now."
+  ],
+  "what are the charges": [
+    "The applicable charges are 3.89%.",
+    "Charges are 3.89%.",
+    "You’re paying 3.89% in charges."
+  ],
+  "what are the loyalty benefits": [
+    "Your loyalty benefits amount to approximately ₹22,000.",
+    "You’ll receive about ₹22,000 in loyalty benefits.",
+    "Loyalty benefits are around ₹22,000."
+  ],
+
+  "premium for september 2023": [
+    "The premium for September 2023 was ₹40,000.",
+    "You paid ₹40,000 for September 2023.",
+    "It was ₹40,000 for September 2023."
+  ],
+  "life insurance outstanding amount pdf": [
+    "You can download your outstanding amount statement from your policy portal.",
+    "Log in to your portal to download the outstanding amount statement.",
+    "The outstanding amount PDF is available in your portal."
+  ],
+
+  "how to update nominee details": [
+    "Log in to your portal or visit the nearest branch to update nominee details.",
+    "You can update nominee details online or at a branch.",
+    "Nominee details can be changed through the portal or at any branch."
+  ],
+  "i want to change my nominee": [
+    "You can change your nominee via your online portal or by visiting a branch.",
+    "Nominee changes can be done online or in person.",
+    "Update your nominee through the portal or at a branch."
+  ],
+  "how to change mobile number": [
+    "Update your mobile number by logging into your portal or calling customer support.",
+    "You can change your mobile number online or through support.",
+    "Mobile number changes can be done via portal or customer care."
+  ],
+  "i changed my phone": [
+    "You can update your mobile number in your online customer profile.",
+    "Update your number through your portal’s profile section.",
+    "Log in and change your number under profile settings."
+  ],
+  "how to check policy status": [
+    "Check your policy status under ‘My Policies’ in your portal.",
+    "You can see your policy status online in ‘My Policies’.",
+    "Policy status is available in your online account."
+  ],
+  "how to pay premium online": [
+    "Log in to the official website, go to ‘Pay Premium’, and follow the steps.",
+    "You can pay online through the portal’s ‘Pay Premium’ section.",
+    "Online payment can be made via the ‘Pay Premium’ option."
+  ],
+  "i missed my premium payment": [
+    "You can still pay within the grace period to avoid a policy lapse.",
+    "Make the payment during the grace period to keep the policy active.",
+    "Grace period payments will keep your policy from lapsing."
+  ],
+  "how to request surrender": [
+    "Submit a surrender request at a branch or through your online portal.",
+    "You can surrender your policy online or in person.",
+    "Surrender requests can be made at branches or via the portal."
+  ],
+  "what is policy revival": [
+    "Policy revival means reactivating a lapsed policy by paying overdue premiums and charges.",
+    "It’s the process of restarting a lapsed policy by clearing dues.",
+    "Revival involves paying missed premiums to reactivate the policy."
+  ],
+  "what is the lock-in period": [
+    "For most ULIP policies, the lock-in period is 5 years.",
+    "It’s 5 years for most ULIP policies.",
+    "The lock-in period is generally 5 years."
+  ],
+  "what is grace period": [
+    "The grace period is usually 15–30 days after the premium due date.",
+    "You get 15–30 extra days after the due date to pay.",
+    "Grace period typically lasts 15–30 days."
+  ],
+  "can i change my payment frequency": [
+    "Yes, you can change it to yearly, half-yearly, quarterly, or monthly.",
+    "Payment frequency changes are possible — yearly, half-yearly, quarterly, or monthly.",
+    "You can switch your payment frequency as needed."
+  ],
+
+  "i want to buy a new policy": [
+    "You can explore plans on our website or speak with our sales team.",
+    "Check our website for plans or contact sales for details.",
+    "We have many plans — explore online or talk to sales."
+  ],
+  "my policy is about to mature": [
+    "We’ll contact you for settlement options, or you can check your maturity details in the portal.",
+    "You’ll hear from us about maturity options soon.",
+    "Maturity details are available in your portal."
+  ],
+  "i need a tax certificate": [
+    "You can download your tax certificate under ‘Statements’ in the portal.",
+    "It’s available in your portal under ‘Statements’.",
+    "Get your tax certificate online in ‘Statements’."
+  ],
+
+  "what is valuenable": [
+    "ValuEnable is an insurtech company offering digital solutions for life insurance and financial services.",
+    "It’s an insurtech company that helps insurers with digital tools and services.",
+    "ValuEnable provides tech-driven solutions for insurance and finance."
+  ],
+  "who founded valuenable": [
+    "ValuEnable was founded by industry veterans with over 20 years of experience.",
+    "It was started by experienced professionals in the insurance industry.",
+    "Industry experts with 20+ years founded ValuEnable."
+  ],
+  "when was valuenable started": [
+    "ValuEnable was launched in June 2021.",
+    "It began in June 2021.",
+    "The company started in June 2021."
+  ],
+  "what does valuenable do": [
+    "They help insurers boost customer engagement using AI, behavioral nudges, and data insights.",
+    "Their work focuses on improving customer engagement for insurers with AI and data.",
+    "They use AI and data-driven strategies to help insurers."
+  ],
+  "what services does valuenable provide": [
+    "Their services include voice AI bots, policy management tools, personalized nudges, and embedded credit solutions.",
+    "They offer AI bots, policy tools, personalized messaging, and credit solutions.",
+    "Services include AI bots, policy tools, nudges, and credit offerings."
+  ],
+  "is valuenable part of any group": [
+    "Yes, ValuEnable is supported by Rainmatter, an initiative by Zerodha.",
+    "It’s backed by Rainmatter from Zerodha.",
+    "Rainmatter, by Zerodha, supports ValuEnable."
+  ],
+  "how does valuenable help insurance companies": [
+    "They provide AI-powered tools to reduce dropouts and improve policy engagement.",
+    "Their tools help insurers retain customers and boost engagement.",
+    "They help insurers reduce dropouts with AI and data."
+  ],
+  "what makes valuenable unique": [
+    "They blend AI, data science, and behavioral finance to make insurance more customer-friendly.",
+    "Their approach combines AI, data, and behavioral insights.",
+    "They stand out by using AI and behavioral finance together."
+  ],
+  "how can i contact valuenable": [
+    "Visit the ValuEnable website or connect via LinkedIn or email.",
+    "You can reach them through their website or LinkedIn.",
+    "Contact them online via website or email."
+  ]
 }
-
