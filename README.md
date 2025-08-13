@@ -65,7 +65,7 @@ The bot will listen, process your query, and reply with both text and voice.
 📺 [Add your YouTube/Drive demo link here]
 
 📸 Screenshots
-Screenshot (39).png
+https://github.com/Sahithi544/bytebot-round-2/blob/main/Screenshot%20(39).png?raw=true
 
 
 🔮 Future Improvements
