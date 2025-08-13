@@ -65,7 +65,7 @@ The bot will listen, process your query, and reply with both text and voice.
 📺 [Add your YouTube/Drive demo link here]
 
 📸 Screenshots
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4582a79a-4262-49b7-8b84-470825613206" />
+Screenshot (39).png
 
 
 🔮 Future Improvements
