@@ -39,5 +39,3 @@ Python 3.8+
 pip package manager
 
 Internet connection (for API calls)
-
-Steps
